@@ -3,7 +3,7 @@ FROM ubuntu
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt update
+RUN apt-get update
 
 RUN \
 	apt-get install -y build-essential git make \
